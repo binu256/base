@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Cost Predictor</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #1a1a1a, #333333);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Main Container */
+        .main-container {
+            background: rgba(40, 40, 40, 0.95);
+            padding: 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            width: 90%;
+            animation: floatIn 1s ease-out;
+        }
+
+        /* Header Container */
+        .header-container {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #bb86fc;
+            font-size: 2.3em;
+            margin: 0;
+            animation: textPop 0.8s ease-out;
+        }
+
+        p {
+            color: #b0bec5;
+            font-size: 1.2em;
+            margin: 15px 0 0;
+            animation: textFade 1s ease-out;
+        }
+
+        /* Button Container */
+        .button-container {
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 14px 40px;
+            font-size: 1.1em;
+            background: linear-gradient(45deg, #bb86fc, #6200ea);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(187, 134, 252, 0.4);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(187, 134, 252, 0.6);
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            animation: shine 2s infinite;
+        }
+
+        /* Animation Keyframes */
+        @keyframes floatIn {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes textPop {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            80% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes textFade {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100%;
+            }
+            20% {
+                left: 100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header-container">
+            <h1>Welcome to Insurance Cost Predictor</h1>
+            <p>Please proceed to enter your information</p>
+        </div>
+        <div class="button-container">
+            <a href="/input"><button>Get Started</button></a>
+        </div>
+    </div>
+</body>
+</html>
